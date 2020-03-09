@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title> Chakra Industries</title>
+	<style>
+		html,body{
+			height:100%;
+		}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #000;
+  height:48px;
+}
+
+.hspan{
+		margin-left:15px;
+		margin-right:15px;
+		margin-top:5px;
+		font-size:85%;
+		color:white;
+		font-family:'Times New Roman',Times,serif;;
+	}
+
+#image2{
+	height:30px;
+	width:90px;
+	float:left;
+	margin-right:100px;
+	margin-left:80px;
+	margin-top:8px;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+  
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background:transparent ;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-line{
+	border-bottom:1px solid gray;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  font-size:90%;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+#contact1{
+  background-color:#b30000;
+  width:180%;
+  height:25px;
+  display: inline-block;
+  position:relative;
+  top:-4px;
+  left:200%;
+}
+#contact2{
+  display:inline-block;
+  color:white;
+  position:relative;
+  left:235%;
+  top:-30px;
+}
+#image1{
+	width:99.99%;
+	box-shadow: 5px 10px #888888; 
+}
+
+
+#chance{
+	background-image: url('ab1.jpg');
+	min-height:60%;
+	margin:8% 0;
+}
+
+#cline{
+	color:#ff9900;
+	font-size:130%;
+	font-family: sans-serif;
+	font-weight: 700;
+	margin-left:43%;
+	padding-top:6%;
+}
+
+#transform{
+	margin-top:4%;
+	border:1px solid #ff9900;
+	background-image: url(data:image/png;base64,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);
+	background-color:#000;
+	opacity:0.8;
+}
+
+#tpara{
+
+	color:white;
+	font-size:120%;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 4px;
+
+}
+
+.button{
+	background-color: transparent;
+	color:#000;
+	font-weight: bold;
+	border:1.5px solid #ff9900;
+	padding:10px 32px;
+	text-align:center;
+	text-decoration: none;
+	font-size:16px;
+	margin:3% 44%;
+	cursor:pointer;
+	border-radius:5%;
+	cursor: pointer;
+	outline:none;
+	position: static;
+
+}
+
+.button:hover{
+	background-color:#b30000;
+	color:#fff;
+}
+#change-text{
+	width:70%;
+	float:left;
+	margin-left:30%;
+	margin-bottom: 10%;
+	height:35%;
+}
+.cooker-text{
+	font-weight: bold;
+	font-family:sans-serif;
+	font-size:140%;
+	line-height: 30%;
+	letter-spacing: -1.5px;
+}
+.cooker-text1{
+width:45%;
+font-weight: 200;
+}
+
+#change-image1{
+	display: inline-block;
+	float:right;
+
+}
+
+.button1{
+	background-color:#b30000;
+	color:#fff;
+	border:none;
+	padding:10px 32px;
+	text-align:center;
+	text-decoration: none;
+	font-size:16px;
+	margin:85px 16px;
+	cursor:pointer;
+	border-radius:5%;
+
+}
+#border-image{
+	width:80%;
+	height:50%;
+	margin-bottom: 10px;
+}
+.border1{
+	border:2px solid black;
+	border-radius: 35%;
+}
+
+#image-div{
+	display: inline-block;
+	position: relative;
+	top:-30%;
+	margin:0 10%;
+}
+
+#border-image2{
+	width:60%;
+	height:50%;
+	padding-top:-20px;
+}
+.zoom{
+	padding:50px;
+	transition:transform .2s;
+	width:200px;
+	height:200px;
+	margin:0 5%;
+	background-color: #fff;
+}
+
+.zoom:hover{
+	-ms-transform:scale(1.2);
+	-webkit-transform:scale(1.2);
+	transform:scale(1.2);
+	background-color: #b30000;
+	color:#fff;
+	cursor:pointer;
+}
+
+#image3{
+	float:left;
+
+}
+
+#divone{
+	display: inline-block;
+	position: relative;
+	top:5%;
+	left:250px;
+	font-size:140%;
+	font-family:sans-serif;
+	color:#b30000;
+	letter-spacing: -2px;
+}
+
+#pone{
+	color:#000;
+	letter-spacing:3px;
+}
+
+#ptwo{
+	width:400px;
+	letter-spacing: 1px;
+	color:#adad85;
+	font-size:60%
+}
+
+#more{
+	border:1.5px solid #b30000;
+	box-sizing:border-box;
+	width:250px;
+	height:50px;
+	padding:10px;
+	text-align: center;
+	color:#000;
+	letter-spacing:0.5px;
+	font-size:90%;
+}
+
+#more:hover{
+	background-color:#b30000;
+	color:#fff;
+}
+
+#awards{
+	clear:both;
+	text-indent:45%;
+	font-size:125%;
+	letter-spacing: 2px;
+	padding:1px;
+	margin-top: 30%;
+	font-family:sans-serif;
+	}
+
+#line{
+	border-bottom:2px solid #b30000;
+	width:80px;
+	position: relative;
+	left:49.8%;
+}
+
+#image4{
+	height:20%;
+	margin-left:37%;
+	margin-bottom: 17%;
+}
+
+footer{
+	clear:both;
+	height:350px;
+	background-image:-webkit-linear-gradient(to right,rgba(77,0,0,0.6),rgba(77,0,0,1));
+	background-image:linear-gradient(to right,rgba(77,0,0,0.6),rgba(77,0,0,1));
+}
+
+
+.psectionone{
+	font-size:120%;
+	color:white;
+	font-family: sans-serif;
+}
+
+.psectiontwo{
+	color:white;
+	font-size:90%;
+}
+.half{
+	float:left;
+	display:inline-block;
+	margin-top:30px;
+	margin-left:150px;
+
+}
+
+.length{
+	width:200px;
+	color:#adad85;
+	font-size:80%;
+}
+
+#list{
+	list-style-type: none;
+	color:#fff;
+	text-align:left; 
+	position:relative;
+	left:-33px;
+	line-height:1.8;
+	font-size:90%;
+
+}
+
+#font{
+	color:#fff;
+}
+
+
+	</style>
+
+</head>
+<body>
+	<div class="navbar">
+    <img src='Chakra2.png' id='image2'>
+  <a href='Chakra.html'>HOME</a>
+  <div class="dropdown">
+    <button class="dropbtn">OUR PRODUCTS 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">KRISTON ROYALE<p class='dropdown-line'></p></a>
+      <a href="#">SURYA INTECH<p class='dropdown-line'></p></a>
+      <a href="#">SRI CHAKRA<p class='dropdown-line'></p></a>
+    </div>
+  </div>
+  <a> BULK ORDERS</a>
+  <a> CATALOGUE</a>
+  <a href='Chakra123.html'> ABOUT US</a>
+  <i class='fa fa-search' id='font' style='margin-top:0.9%'></i>
+  <a href='chakra1.html'><span><div id='contact1'></div><div id='contact2'>Contact <i class='fa fa-arrow-right'></i></div></span></a>
+
+</div>
+
+<img src='Chakra1.png' id='image1'>
+<div id='chance'> <p id='cline'> CHANCE TO WIN A PRESSURE COOKER</p><div id='transform'>
+	<p id='tpara'>QUIZ OF THE MONTH</p>
+	</div> <button class='button'>ENTER NOW </button></div>
+	
+<div id='change-text'><div id='change-image1'><img id='image10' src='change-image1.png' width='80%' height='70%'></div><p class='cooker-text' id='change11'> SRI CHAKRA</p><p id='change12' class='cooker-text'>ALUMINIUM PRESSURE COOKER</p><p id='change13' class='cooker-text1'> Cooker for a variety of food items multipurpose cooking.With this pressure cooker you can many food items such as rice,dal,sabzi and stews without having to wait a long time to cook such delicacies</p><p><button class='button1'> Submit</button></p></div>
+
+
+<div class='zoom border1' id='image-zoom' style='display: inline-block;'><img src='pressure1.jpeg' id='border-image'><p>KRISTON ROYALE</p><p><i class='fa fa-star fa-1x'></i><i class='fa fa-star fa-1x'></i><i class='fa fa-star fa-1x'></i><i class='fa fa-star fa-1x'></i><i class='fa fa-star fa-1x'></i></p><p> EXPAND &emsp;<i class='fa fa-arrow-right'></i></p></div>
+
+<div class='zoom border1' id='image-div'><img src='presure2.jpg' id='border-image2'><p>SRI CHAKRA</p><p><i class='fa fa-star fa-1x'></i><i class='fa fa-star fa-1x'></i><i class='fa fa-star fa-1x'></i><i class='fa fa-star fa-1x'></i><i class='fa fa-star fa-1x'></i></p><p> EXPAND &emsp;<i class='fa fa-arrow-right'></i></p></div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<div style='height:150px'><img src='Chakra3.png' id='image3'></div>
+	<div id='divone'><b>MR. KAUSHIK SANGAMESWARAN</b></p>
+	<p id='pone'><b>A MESSAGE FROM OUR MD.</b></p>
+	<p id='ptwo'> Lorem ipsum dolor amet,consectetur,adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolo sir amet,consectetur,adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+	<p id='more'> Read More</p>
+</div>
+
+<div id='awards'><b>COMPANY AWARDS</b><p id='line'></p></div>
+<img src='Chakra4.png' id='image4'>
+
+<p style='white-space: pre'></p>
+
+
+
+
+
+	<footer>
+		<section class='half'>
+			<p class='psectionone'> <b>SRI CHAKRA INDUSTRIES</b></p>
+			<p class='psectiontwo'> About Us</p>
+			<p class='length'> Reckoned as one of the noted manufactures,exporters and suppliers of Pressure Cookers,Sri Chakra Industries, have achieved a strong pressence in the industry owing to our commitment towards quality</p>
+			<p class='psectiontwo'> Our Address</p>
+			<p class='length'> 13/14,Azeez Sait Industrial Estate,Nayandhalli,Mysore road,Bengaluru,Karnataka,560039,India</p>
+		</section>
+
+		<section class='half'>
+			<p class='psectionone'><b>CATEGORIES</b></p>
+			<ul id='list'>
+				<li> Products</li>
+				<li> Our Team</li>
+				<li> Contact Us</li>
+				<li> Catalogue</li>
+				<li> Orders</li>
+			</ul>
+		</section>
+
+		<section class='half'>
+			<p class='psectionone'><b> CONTACT</b></p>
+			<p class='psectiontwo'>080 2339 2877</p>
+			<p class='psectiontwo'> srichakra2020@@gmail.com</p>
+			<p id='font'>
+				<i class='fa fa-facebook fa-1x'></i>
+				&emsp;
+				<i class='fa fa-linkedin fa-1x'></i>
+				&emsp;
+				<i class='fa fa-whatsapp fa-1x'></i>
+				&emsp;
+				<i class='fa fa-youtube fa-1x'></i>
+			</p>
+		</section>
+
+
+	</footer>
+<script>
+	document.getElementById('image-zoom').onclick=function(){
+		document.getElementById('change11').innerHTML='KRISTON - BEBAS NEUE BLD 25';
+		document.getElementById('change12').innerHTML='ROYALE PRESSURE COOKER';
+		document.getElementById('change13').innerHTML='KRISTON ROYALE range of cookerware is made from WROUGHT Aluminium material to ensure the food gets cooked evenly and quickly.It has specially designed handles for ease of operations, It comprises of responsive safety value to ensure safe cooking';
+		document.getElementById('image10').src='change-image2.png';
+	}
+
+	document.getElementById('image-div').onclick=function(){
+		document.getElementById('change11').innerHTML='SRI CHAKRA';
+		document.getElementById('change12').innerHTML='ALUMINIUM PRESSURE COOKER';
+		document.getElementById('change13').innerHTML='Cooker for a variety of food items multipurpose cooking.With this pressure cooker you can many food items such as rice,dal,sabzi and stews without having to wait a long time to cook such delicacies';
+		document.getElementById('image10').src='change-image1.png';
+	}
+
+</script>
+
+</body>
+</html>
